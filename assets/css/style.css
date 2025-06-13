@@ -1,0 +1,102 @@
+#page {
+  display: grid;
+  width: 100%;
+  min-height: 100vh;
+  grid-template-areas:
+    "head head"
+    "nav  main"
+    "foot  foot";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr 4fr;
+  background-color: #E6E6E6;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: #E6E6E6;
+}
+
+#page > header {
+  grid-area: head;
+  background-color: #E6E6E6;
+}
+
+#page > nav {
+  grid-area: nav;
+  background-color: #E6E6E6;
+}
+
+#page > main {
+  grid-area: main;
+  background-color: #E6E6E6;
+}
+
+#page > footer {
+  grid-area: foot;
+  background-color: white;
+}
+
+.navbar {
+  background-color: #20435c;
+  color: white;
+  display: flex;
+  align-items: center;       
+  justify-content: space-between; 
+  height: 60px;                
+  padding: 0 20px;            
+  position: relative;
+}
+
+
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-weight: normal;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  padding-left: 5dvh;
+  font-family: sans-serif;
+  text-align: start;
+}
+
+.sidebar h3 {
+  font-size: 1em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.category-list li {
+  color: #333;
+  font-size: 0.95em;
+}
+
+.category-list li span {
+  color: #888;
+  font-size: 0.9em;
+}
+
+footer{
+    margin-top: 1dvh;
+    padding-top: 1.5dvh;
+    text-align: center;
+}
+
+.card-footer {
+  background-color: #20435c !important;
+}
